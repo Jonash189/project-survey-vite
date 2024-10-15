@@ -1,8 +1,25 @@
-export const Survey = () => {
-  return
+import React, { useState } from 'react';
+import { Question1 } from "./Question1"
 
-  <form onSubmit={handleSubmit}></form>
-  <Question1 />
-  <Question2 />
-  <Question3 />
-}
+
+
+export const Survey = () => {
+  const [activity, setActivity] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <Question1 activity={activity} setActivity={setActivity} />
+
+        <br></br> <br></br> <br></br> <br></br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
+

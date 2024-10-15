@@ -1,5 +1,15 @@
 import { Header } from "./components/Header";
+import { Survey } from "./components/Survey";
+
 
 export const App = () => {
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <Survey />
+    </div>
+
+  );
+
+
 };
